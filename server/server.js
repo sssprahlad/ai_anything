@@ -7,8 +7,7 @@ require('dotenv').config({ path: './src/.env' });
 const port = process.env.PORT;
 
 const allowedOrigins = [
-    //   "https://our-bus.vercel.app",
-    //   "https://our-bus.onrender.com",
+    "https://ai-anything-a4rs.vercel.app",
     "http://localhost:3000",
     "chrome-extension://dmhljjnonlhapikmelaefohecogokhio",
 ];
@@ -44,7 +43,7 @@ app.use("/api", require("./src/routers/bookingsRouter"));
 
 
 app.get("/", (req, res) => {
-    
+
     res.send("Hello World!");
 });
 
