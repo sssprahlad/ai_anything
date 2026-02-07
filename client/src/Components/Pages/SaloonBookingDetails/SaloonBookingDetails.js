@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useMemo } from 'react'
 import './SaloonBookingDetails.css'
 import Navbar from '../../Navbar/Navbar'
 import { useContext } from 'react'
@@ -54,7 +54,7 @@ const SaloonBookingDetails = () => {
 
   const fetchSaloonDetails = async () => {
     try {
-     
+
       const response = await fetch(GET_SALOON_BY_ID_URL + SaloonId);
       const data = await response.json();
       setSaloonDetails(data?.saloon);
@@ -74,7 +74,7 @@ const SaloonBookingDetails = () => {
         message: "Error fetching saloon details",
         severity: "error"
       });
-    } 
+    }
   }
 
 
@@ -107,7 +107,7 @@ const SaloonBookingDetails = () => {
   useEffect(() => {
     fetchSaloonDetails()
     fetchExistingBookings(SaloonId)
-  }, []) // SaloonId
+  }, [SaloonId, fetchSaloonDetails])
 
 
 
@@ -130,7 +130,7 @@ const SaloonBookingDetails = () => {
     { "id": "Pet Grooming Salon", "type": "Pet Grooming Salon" }
   ]
 
-  const saloonTimings = [
+  const saloonTimings = useMemo(() => [
     { id: 1, time: "9:00 AM - 10:00 AM" },
     { id: 2, time: "10:00 AM - 11:00 AM" },
     { id: 3, time: "11:00 AM - 12:00 PM" },
@@ -145,8 +145,7 @@ const SaloonBookingDetails = () => {
     { id: 12, time: "8:00 PM - 9:00 PM" },
     { id: 13, time: "9:00 PM - 10:00 PM" },
     { id: 14, time: "10:00 PM - 11:00 PM" },
-
-  ]
+  ], []);
 
   useEffect(() => {
     if (saloonBookingDetails?.booking_date && existingBookings?.length > 0) {
@@ -165,10 +164,10 @@ const SaloonBookingDetails = () => {
       }));
 
       setUpdatedBookings(updatedSlots);
-    }else{
+    } else {
       setUpdatedBookings(saloonTimings);
     }
-  }, [saloonBookingDetails?.booking_date, existingBookings, saloonTimings,SaloonId])
+  }, [saloonBookingDetails?.booking_date, existingBookings, saloonTimings])
 
 
   const handleConfirmBooking = async () => {
@@ -183,14 +182,14 @@ const SaloonBookingDetails = () => {
         body: JSON.stringify(saloonBookingDetails),
       })
       const data = await response.json();
-      if(data?.status === 200){
+      if (data?.status === 200) {
         setLoading(false);
         setSnackbar({
           open: true,
           message: "Booking created successfully",
           severity: "success"
         });
-      }else{
+      } else {
         setSnackbar({
           open: true,
           message: data?.message,
@@ -222,7 +221,7 @@ const SaloonBookingDetails = () => {
   return (
     <div className="home-container">
       <Navbar />
-      <h1 style={{color:"#CEC3FD"}}>Saloon Booking Timings</h1>
+      <h1 style={{ color: "#CEC3FD" }}>Saloon Booking Timings</h1>
       <div className='saloon-details-container'>
         <div className='saloon-details-left'>
           <p className='shop-name'>{saloonDetails?.name}</p>
@@ -302,7 +301,7 @@ const SaloonBookingDetails = () => {
               <div
                 key={timeSlot.id}
                 className={timeSlot.isBooked ? "time-slot booked" : (selectedTimeSlot === timeSlot.id ? "time-slot selected" : "time-slot")}
-                onClick={() => {!timeSlot.isBooked && setSelectedTimeSlot(timeSlot.id) ; setSaloonBookingDetails({ ...saloonBookingDetails, booking_time: timeSlot.time })}}    
+                onClick={() => { !timeSlot.isBooked && setSelectedTimeSlot(timeSlot.id); setSaloonBookingDetails({ ...saloonBookingDetails, booking_time: timeSlot.time }) }}
               >
                 {timeSlot.time}
               </div>
@@ -312,7 +311,7 @@ const SaloonBookingDetails = () => {
 
       </div>
       <div className='confirm-booking-container'>
-        <button onClick={handleConfirmBooking} >{loading ? <div className="spinner" style={{width: "30px", height: "30px"}}></div> : "Confirm Booking"}</button>
+        <button onClick={handleConfirmBooking} >{loading ? <div className="spinner" style={{ width: "30px", height: "30px" }}></div> : "Confirm Booking"}</button>
       </div>
       <SnackbarPopup open={snackbar.open} message={snackbar.message} severity={snackbar.severity} setSnackbar={setSnackbar} />
 

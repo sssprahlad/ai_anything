@@ -58,7 +58,7 @@ const MyBookings = () => {
                 const data = await response.json();
                 console.log(data);
                 if (response.ok) {
-                    fetchBookings(); 
+                    fetchBookings();
                 }
             } catch (error) {
                 console.error('Error deleting booking:', error);
@@ -94,7 +94,6 @@ const MyBookings = () => {
                 },
                 body: JSON.stringify(updateBokkingDetails),
             });
-            const data = await response.json();
             if (response.ok) {
                 setEditBookingId(null);
                 fetchBookings();
@@ -109,7 +108,7 @@ const MyBookings = () => {
     return (
         <div className="home-container">
             <Navbar />
-            <h1 style={{color:"#CEC3FD"}}>My Bookings</h1>
+            <h1 style={{ color: "#CEC3FD" }}>My Bookings</h1>
             <div className="my-bookings-container">
                 <table>
                     <thead style={{ textAlign: "left" }}>
@@ -132,10 +131,10 @@ const MyBookings = () => {
                                     <td>
                                         <input
                                             type="text"
-                                            style={{background:"transparent"}}
-                                           
+                                            style={{ background: "transparent" }}
+
                                             className={
-                                                editBookingId === booking.id 
+                                                editBookingId === booking.id
                                                     ? "editable-input"
                                                     : "readonly-input"
                                             }
@@ -156,7 +155,7 @@ const MyBookings = () => {
                                     <td>
                                         <input
                                             type="text"
-                                            style={{background:"transparent"}}
+                                            style={{ background: "transparent" }}
                                             disabled={editBookingId !== booking.id}
                                             className={
                                                 editBookingId === booking.id
@@ -180,7 +179,7 @@ const MyBookings = () => {
                                     <td>
                                         <input
                                             type="text"
-                                            style={{background:"transparent"}}
+                                            style={{ background: "transparent" }}
                                             className={
                                                 editBookingId === booking.id
                                                     ? "editable-input"
@@ -203,7 +202,7 @@ const MyBookings = () => {
                                     <td>
                                         <input
                                             type="date"
-                                            style={{background:"transparent"}}
+                                            style={{ background: "transparent" }}
                                             className={
                                                 editBookingId === booking.id
                                                     ? "editable-input"
@@ -226,7 +225,7 @@ const MyBookings = () => {
                                     <td>
                                         <input
                                             type="text"
-                                            style={{background:"transparent"}}
+                                            style={{ background: "transparent" }}
                                             className={
                                                 editBookingId === booking.id
                                                     ? "editable-input"
@@ -249,7 +248,7 @@ const MyBookings = () => {
                                     <td>
                                         <input
                                             type="text"
-                                            style={{background:"transparent"}}
+                                            style={{ background: "transparent" }}
                                             className={
                                                 editBookingId === booking.id
                                                     ? "editable-input"
@@ -272,7 +271,7 @@ const MyBookings = () => {
                                     <td>
                                         <input
                                             type="text"
-                                            style={{background:"transparent"}}
+                                            style={{ background: "transparent" }}
                                             className={
                                                 editBookingId === booking.id
                                                     ? "editable-input"
@@ -295,9 +294,9 @@ const MyBookings = () => {
                                     <td>
                                         <input
                                             type="text"
-                                            style={{background:"transparent"}}
+                                            style={{ background: "transparent" }}
 
-                                                className={
+                                            className={
                                                 editBookingId === booking.id
                                                     ? "editable-input"
                                                     : "readonly-input"

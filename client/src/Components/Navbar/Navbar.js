@@ -1,6 +1,6 @@
 import "./Navbar.css"
 import { Link, useNavigate, useLocation } from "react-router-dom"
-import { useState, useContext } from "react"
+import { useState } from "react"
 
 const Navbar = () => {
     const navigate = useNavigate();
@@ -34,7 +34,7 @@ const Navbar = () => {
     //     }
     // };
 
-    
+
     const handleMyBookingsClick = (userId) => {
         navigate("/my-bookings");
     }
@@ -56,7 +56,7 @@ const Navbar = () => {
                         {showDropdown && (
                             <div className="dropdown-menu">
                                 <h4 style={{ color: "#E0E4EC" }} onClick={handleMyBookingsClick}>My Bookings</h4>
-                                
+
                             </div>
                         )}
                     </div>
