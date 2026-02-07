@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react'
+import React, { useState, useEffect, useMemo, useCallback } from 'react'
 import './SaloonBookingDetails.css'
 import Navbar from '../../Navbar/Navbar'
 import { useContext } from 'react'
@@ -52,7 +52,7 @@ const SaloonBookingDetails = () => {
 
 
 
-  const fetchSaloonDetails = async () => {
+  const fetchSaloonDetails = useCallback(async () => {
     try {
 
       const response = await fetch(GET_SALOON_BY_ID_URL + SaloonId);
@@ -75,8 +75,7 @@ const SaloonBookingDetails = () => {
         severity: "error"
       });
     }
-  }
-
+  }, [SaloonId]);
 
   const fetchExistingBookings = async (saloonId) => {
     try {
