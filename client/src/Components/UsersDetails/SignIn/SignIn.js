@@ -47,6 +47,8 @@ const SignIn = () => {
             console.log(data, "login data");
             localStorage.setItem("token", data?.token);
             localStorage.setItem("userId", data?.user?.id);
+            localStorage.setItem("name", data?.user?.email);
+            console.log(data?.user?.id, "user id");
             setUserId(data?.user?.id)
             if (data.status === 200 || data.status === 201) {
                  setSnackbar({

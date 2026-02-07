@@ -52,7 +52,7 @@ const Navbar = () => {
                 </ul>
                 <div className="logout-container">
                     <div className="account-dropdown">
-                        <button className="account-container" onClick={() => setShowDropdown(!showDropdown)}>S</button>
+                        <button className="account-container" onClick={() => setShowDropdown(!showDropdown)}>{localStorage.getItem("name")?.slice(0, 1).toUpperCase() || "A"}</button>
                         {showDropdown && (
                             <div className="dropdown-menu">
                                 <h4 style={{ color: "#E0E4EC" }} onClick={handleMyBookingsClick}>My Bookings</h4>
