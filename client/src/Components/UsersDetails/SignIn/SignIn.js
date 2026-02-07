@@ -18,7 +18,7 @@ const SignIn = () => {
     });
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
-    const { userId, setUserId } = useContext(UserContext);
+    const {setUserId } = useContext(UserContext);
 
     const handleChange = (e) => {
         setSignInData({

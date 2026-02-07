@@ -2,13 +2,12 @@ import "./Home.css"
 import Navbar from "../../Navbar/Navbar"
 import { GET_SALOONS_URL } from "../../../Constants/Constants"
 import { useEffect, useState } from "react"
-import { useNavigate, Link } from "react-router-dom"
+import { Link } from "react-router-dom"
 import { useContext } from 'react'
 import { UserContext } from '../../../Context/Context'
 import Footer from '../../Footer/Footer'
 const Home = () => {
     const [saloons, setSaloons] = useState([])
-    const navigate = useNavigate()
     const { setSaloonId } = useContext(UserContext)
 
     useEffect(() => {

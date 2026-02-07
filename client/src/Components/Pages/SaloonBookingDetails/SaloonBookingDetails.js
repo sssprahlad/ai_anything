@@ -107,7 +107,7 @@ const SaloonBookingDetails = () => {
   useEffect(() => {
     fetchSaloonDetails()
     fetchExistingBookings(SaloonId)
-  }, [SaloonId])
+  }, []) // SaloonId
 
 
 

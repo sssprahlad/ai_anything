@@ -1,16 +1,11 @@
 import "./Navbar.css"
 import { Link, useNavigate, useLocation } from "react-router-dom"
 import { useState, useContext } from "react"
-import { UserContext } from '../../Context/Context'
-import { GET_BOOKINGS_URL } from '../../Constants/Constants'
 
 const Navbar = () => {
     const navigate = useNavigate();
     const location = useLocation();
-    const { user } = useContext(UserContext);
     const [showDropdown, setShowDropdown] = useState(false);
-    const [bookings, setBookings] = useState([]);
-    const [toggleDropdown, setToggleDropdown] = useState(false);
 
     const handleLogout = () => {
         console.log("Logout clicked");

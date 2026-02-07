@@ -1,6 +1,6 @@
 import Navbar from "../../Navbar/Navbar"
 import "./MyBookings.css"
-import { GET_BOOKINGS_URL, MY_BOOKINGS_URL, UPDATE_BOOKING_URL } from "../../../Constants/Constants"
+import { MY_BOOKINGS_URL, UPDATE_BOOKING_URL } from "../../../Constants/Constants"
 import { useState, useEffect } from "react"
 
 
@@ -56,8 +56,9 @@ const MyBookings = () => {
                     },
                 });
                 const data = await response.json();
+                console.log(data);
                 if (response.ok) {
-                    fetchBookings(); // Refresh the bookings list
+                    fetchBookings(); 
                 }
             } catch (error) {
                 console.error('Error deleting booking:', error);
