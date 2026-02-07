@@ -1,0 +1,137 @@
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+
+}
+
+.nav-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border: 1px solid #393B3F;
+    border-radius: 8px;
+    padding: 1rem;
+    background: #070B0F;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    list-style-type: none;
+}
+
+.nav-item {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
+
+.nav-item:hover {
+    color: #667eea;
+}
+
+.active {
+    color: #667eea;
+}
+
+.logout-container {
+    display: flex;
+    align-items: center;
+    gap: 0.875rem;
+}
+
+.logout-button {
+    background: transparent;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    border: 1px solid #393B3F;
+}
+
+.logout-button:hover {
+    /* background: #E74C3D; */
+    border: 1px solid #E74C3D;
+    /* color: #E74C3D; */
+    box-shadow: 0 0 0 2px rgba(231, 76, 61, 0.2);
+}
+
+.account-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    border: 1px solid #393B3F;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    height: 40px;
+    width: 40px;
+    position: relative;
+}
+
+.account-dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #070B0F;
+    border: 1px solid #393B3F;
+    border-radius: 8px;
+    padding: 1rem;
+    min-width: 250px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+}
+
+.dropdown-menu h4 {
+    margin: 0 0 0.5rem 0;
+    color: #E0E4EC;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border-bottom: 1px solid #393B3F;
+    padding-bottom: 0.5rem;
+}
+
+.booking-item {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #2A3449;
+}
+
+.booking-item p {
+    margin: 0;
+    font-size: 0.75rem;
+    color: #97A1B5;
+}
+
+.booking-item:first-child p {
+    color: #E0E4EC;
+    font-weight: 500;
+}
+
+.no-bookings {
+    color: #97A1B5;
+    font-size: 0.875rem;
+    text-align: center;
+    padding: 1rem 0;
+    margin: 0;
+}

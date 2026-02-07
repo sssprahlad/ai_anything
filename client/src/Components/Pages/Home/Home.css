@@ -1,0 +1,86 @@
+.home-container {
+    padding: 20px;
+    background: #04080C;
+    min-height: 100vh;
+    color: white;
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    flex-direction: column;
+    
+}
+
+.saloons-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+     padding: 1rem 2rem;
+}
+
+.saloon-card {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #393B3F;
+    border-radius: 8px;
+    
+}
+
+.saloon-name-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 5px;
+    width: 40%;
+}
+
+.saloon-name-container h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: #CEC3FD;
+}
+.saloon-name-container p {
+    margin: 0;
+    color: #99999B;
+    font-size: 0.875rem;
+}
+
+.saloon-timings-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: start;
+}
+
+.saloon-timings-container p {
+    margin: 0;
+    color: #99999B;
+    font-size: 0.875rem;
+}
+
+.booking-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.booking-container button {
+    /* background: #3893FF; */
+    background: linear-gradient(90deg, lab(43.0295% 75.21 -86.5669) 0%, lab(44.0605% 29.0279 -86.0352));
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.booking-container button:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+    /* opacity: 10; */
+}
+
+
+

@@ -1,0 +1,113 @@
+.sign-in-form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    background:#151F33;
+    width: 300px;
+    box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.1);
+
+}
+
+.sign-in-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    /* border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    background:#151F33;
+    width: 300px;
+    box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.1); */
+} 
+
+.sign-in-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.sign-in-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+    color: #E0E4EC;
+}
+
+.sign-in-subtitle {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #97A1B5;
+    text-align: center;
+}
+
+.sign-in-label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #97A1B5;
+    text-align: left;
+}
+
+.sign-in-input {
+    padding: 0.5rem;
+    border: 1px solid #2A3449;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    background: transparent;
+    color: #E0E4EC;
+    min-width: 270px;
+
+}
+.sign-in-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    border: 1px solid #2A3449;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    background: #3B85EA;
+    color: #E0E4EC;
+    font-weight: 600;
+    cursor: pointer;
+}
+.sign-in-button:hover {
+    background: #2778e9;
+}
+
+
+.dont-have-account-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.875rem;
+    font-weight: 500;
+    background:#182337;
+    color: #97A1B5;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+.sing-up-btn {
+   background: transparent !important;
+    border: none;
+    color:#3B85EA !important;
+    cursor: pointer;
+    font-weight: 600 !important;
+}
+
+.sing-up-btn:hover {
+    text-decoration: underline;
+}
+

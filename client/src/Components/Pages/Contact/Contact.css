@@ -1,0 +1,146 @@
+.contact-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-content {
+    flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    width: 100%;
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.contact-header h1 {
+    color: #2c3e50;
+    font-size: 48px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.contact-header p {
+    color: #7f8c8d;
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-top: 40px;
+}
+
+.contact-info h2 {
+    color: #2c3e50;
+    font-size: 32px;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.contact-item {
+    margin-bottom: 30px;
+}
+
+.contact-item h3 {
+    color: #3498db;
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.contact-item p {
+    color: #34495e;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.contact-form h2 {
+    color: #2c3e50;
+    font-size: 32px;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    color: #2c3e50;
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-weight: 500;
+    text-align: left;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.submit-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #2980b9;
+}
+
+@media (max-width: 768px) {
+    .contact-content {
+        padding: 20px 15px;
+    }
+
+    .contact-header h1 {
+        font-size: 36px;
+    }
+
+    .contact-header p {
+        font-size: 16px;
+    }
+
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .contact-info h2,
+    .contact-form h2 {
+        font-size: 28px;
+    }
+}
