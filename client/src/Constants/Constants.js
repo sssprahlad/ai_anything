@@ -1,4 +1,5 @@
-const API_BASE_URL = "http://localhost:5050/api";
+const API_BASE_URL =  "https://ai-anything.onrender.com/api"
+//"http://localhost:5050/api";
 
 export const REGISTER_URL = API_BASE_URL + "/users/register";
 export const LOGIN_URL = API_BASE_URL + "/users/login";
